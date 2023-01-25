@@ -1,0 +1,9 @@
+  df = pd.read_csv('', sep=',')
+  df = dropna(df)
+  df = add_all_ta_features(
+  df, open="Open", high="High", low="Low", close="Close", volume="Volume_BTC", fillna=True)
+
+
+
+  yf.pdr_override()
+  data = pdr.get_data_yahoo(ticker, start="2017-01-01", end="2017-04-30")
